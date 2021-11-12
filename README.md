@@ -1,11 +1,11 @@
 # AzRBACRoleManager
 
-##.SYNOPSYS
+## SYNOPSYS
 
     Script helps assign or remove an RBAC role assignment to a user/group/service principal using a MS excel sheet as input (in specific format)
 
 
-##.DESCRIPTION
+## DESCRIPTION
 
     This script has been designed to help Azure IAM Admin to assign and revoke Azure RBAC permission on Azure resources. The 
     script takes as input an xlsx spreadsheet which contains the RBAC details including 
@@ -29,24 +29,24 @@
     I do acknowledge that this can be further optimized (future versions) and also that there will be better ways to do this as well :-)
 
 
-##.PARAMETERS
+## PARAMETERS
 
     **rbacFile** - Provide the full path of the template xlsx spreadsheet file
     **tenantId** - the GUID representing the Azure AD tenant against which this script has to be executed
 
 
-##.INPUTS
+## INPUTS
 
     - File path of xlsx spreadsheet that contains RBAC details to be assigned or removed in a sepcific format
     - Azure TenantId of the Azure Tenant under which the RBAC assignment/removal needs to be performed
 
   
-##.OUTPUTs
+## OUTPUTs
 
     - Input xlsx spreadsheet is updated with status of each RBAC assignment or removal
     
 
-##.Author & Version History
+## Author & Version History
 
     **Script Author**: Gowri Shanker Raghuraman
     **Version**: 1.0
@@ -55,7 +55,7 @@
     **Change Author**: Gowri Shanker Raghuraman
 
 
-##.LIMITATIONS / KNOWN ISSUES
+## LIMITATIONS / KNOWN ISSUES
 
     - Script only works when provided with AD Group Display Name, Service Principal Display Name and User Principal Name (including domain name; refer to your Azure Active Directory)
     - Exception andling is not implemented thoroughly so error messages may not be very friendly in some cases
@@ -68,7 +68,7 @@
     - There is no support for Nested Resource level role assignment and removal (Ex. RBAC assignment/removal on a Subnet inside a VNet). This need a revision
 
 
-##.PRE-REQUISITES
+## PRE-REQUISITES
 
     - Ensure Az and ImportExcel modules are installed on your local machine. If not run the following cmdlets
     
@@ -80,6 +80,6 @@
     - The user account used to login should have Owner / User Access Administrator RBAC role assigned on the Subscription
     - For RBAC removal, ensure no delete lock exists on resource and resource groups
 
-##.USAGE
+## USAGE
 
     *ManageRBACAssignment.ps1 -rbacFile <RBAC_xlsx_file_path> -tenantId <AAD_Tenant_ID>*
