@@ -81,4 +81,4 @@
 
 ## USAGE
 
-    ManageRBACAssignment.ps1 -rbacFile <RBAC_xlsx_file_path> -tenantId <AAD_Tenant_ID>
+    AzRBACRoleManager.ps1 -rbacFile <RBAC_xlsx_file_path> -tenantId <AAD_Tenant_ID>
