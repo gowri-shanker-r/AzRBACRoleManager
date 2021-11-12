@@ -30,9 +30,8 @@
 
 
 ## PARAMETERS
-
-    **rbacFile** - Provide the full path of the template xlsx spreadsheet file
-    **tenantId** - the GUID representing the Azure AD tenant against which this script has to be executed
+    rbacFile : Provide the full path of the template xlsx spreadsheet file
+    tenantId : the GUID representing the Azure AD tenant against which this script has to be executed
 
 
 ## INPUTS
@@ -48,11 +47,11 @@
 
 ## Author & Version History
 
-    **Script Author**: Gowri Shanker Raghuraman
-    **Version**: 1.0
-    **Creation Date**: 12-Nov-2021
-    **Details**: RBAC management script
-    **Change Author**: Gowri Shanker Raghuraman
+    Script Author: Gowri Shanker Raghuraman
+    Version: 1.0
+    Creation Date: 12-Nov-2021
+    Details: RBAC management script
+    Change Author: Gowri Shanker Raghuraman
 
 
 ## LIMITATIONS / KNOWN ISSUES
@@ -72,14 +71,14 @@
 
     - Ensure Az and ImportExcel modules are installed on your local machine. If not run the following cmdlets
     
-        *Install-Module Az -Scope CurrentUser*
-        *Install-Module ImportExcel -Scope CurrentUser*
+        Install-Module Az -Scope CurrentUser
+        Install-Module ImportExcel -Scope CurrentUser
 
-    **Note**: Using the CurrentUser scope will install the modules in your profile so you will not need Admin rights to install them
+    Note: Using the CurrentUser scope will install the modules in your profile so you will not need Admin rights to install them
 
     - The user account used to login should have Owner / User Access Administrator RBAC role assigned on the Subscription
     - For RBAC removal, ensure no delete lock exists on resource and resource groups
 
 ## USAGE
 
-    *ManageRBACAssignment.ps1 -rbacFile <RBAC_xlsx_file_path> -tenantId <AAD_Tenant_ID>*
+    ManageRBACAssignment.ps1 -rbacFile <RBAC_xlsx_file_path> -tenantId <AAD_Tenant_ID>
